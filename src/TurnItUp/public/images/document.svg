@@ -1,0 +1,23 @@
+<svg width="257" height="346" xmlns="http://www.w3.org/2000/svg">
+    <title>Layer 1</title>
+    <g transform="matrix(20.3109 0 0 20.3109 -1357.41 -750.01)" id="g17596">
+        <path fill="#ffffff" fill-rule="evenodd" stroke="#555555" stroke-width="1"
+              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" id="rect1171"
+              d="m67.923279,37.369595c-0.359306,0 -0.64856,0.289261 -0.64856,0.648563l0,14.856369c0,0.35931 0.289253,0.64856 0.64856,0.64856l10.478371,0c0.359314,0 0.64856,-0.289249 0.64856,-0.64856l0,-11.094692c0,-0.35931 -4.699486,-4.41024 -5.0588,-4.41024l-6.06813,0z">
+        </path>
+        <path fill="#ffffff" fill-rule="evenodd" stroke="#555555" stroke-width="1"
+              stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="4" id="rect1794"
+              d="m74.149521,37.423737l-0.014748,3.42728c0,0.35931 0.289246,0.648571 0.64856,0.648571l4.133926,0l-4.767738,-4.075851z">
+        </path>
+        <path fill="#ffffff" fill-rule="evenodd" stroke-width="0.02766"
+              stroke-miterlimit="4" id="rect12991"
+              d="m68.05941,37.721485l-0.43,0.272842l6.15535,0l0,-0.260693l-5.725349,-0.01215z">
+
+        </path>
+        <path fill="#ffffff" fill-opacity="0.40149" fill-rule="evenodd" stroke-width="0.02766"
+              stroke-miterlimit="4" id="path14235"
+              d="m78.69268,52.735817c0.032692,0.26754 -0.03476,0.328728 -0.427841,0.402611l0.088531,-11.287403l0.311249,0l0.028061,10.884792z">
+
+        </path>
+    </g>
+</svg>

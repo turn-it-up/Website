@@ -1,0 +1,15 @@
+<!--<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">-->
+<!--&lt;!&ndash; Created with SVG-edit - http://svg-edit.googlecode.com/ &ndash;&gt;-->
+<!--<g>-->
+<!--<title>Layer 1</title>-->
+<!--<circle stroke="#555555" fill-opacity="0" id="svg_1" r="17.443665" cy="20" cx="20" stroke-width="4" fill="#000000"/>-->
+<!--<text transform="matrix(1 0 0 1 0 0)" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="helvetica" font-size="24" id="svg_2" y="28.25" x="19.75" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#555555" fill="#555555">?</text>-->
+<!--</g>-->
+<!--</svg>-->
+<svg width="40" height="40" xmlns="http://www.w3.org/2000/svg">
+    <g>
+        <circle stroke="#555555" fill-opacity="0" id="svg_1" r="17.443665" cy="20" cx="20"
+                stroke-width="4" fill="#000000"></circle>
+        <text transform="matrix(1 0 0 1 0 0)" font-weight="bold" xml:space="preserve" text-anchor="middle" font-family="helvetica" font-size="24" id="svg_2" y="28.25" x="19.75" stroke-linecap="null" stroke-linejoin="null" stroke-dasharray="null" stroke-width="0" stroke="#555555" fill="#555555">?</text>
+    </g>
+</svg>

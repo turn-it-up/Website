@@ -1,0 +1,333 @@
+html, body, section {
+    font-family: helvetica, serif;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    height: 100%;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+
+body {
+    background-color: #000000;
+    line-height: 1.5;
+    text-align: center;
+}
+
+h1 {
+    font-size: 1em;
+    margin: 0 0;
+}
+
+h2 {
+    font-size: 2.5em;
+    margin: 0 0 .1em 0;
+}
+
+ul {
+    list-style: none;
+    margin: 0.1em 0;
+}
+
+a {
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+}
+
+p {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+table {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+section a {
+    color: #555555;
+}
+
+.container {
+    height: 100%;
+    margin: 0 auto;
+    max-width: 100em;
+    padding: .2em 6.5625%;
+}
+
+/*******************************************
+ *                                         *
+ * ********** HEADER AND FOOTER ********** *
+ *                                         *
+ *******************************************/
+
+header, footer {
+    background-color: rgba(0, 0, 0, 0.75);
+    width: 100%;
+    left: 0;
+    display: block;
+    text-align: right;
+}
+
+/* ********** HEADER ********** */
+
+header {
+    position: fixed;
+    top: 0;
+}
+
+header a {
+    color: #ffffff;
+}
+
+.logo {
+    float: left;
+    font-size: 1.75em;
+    font-weight: bolder;
+}
+
+.nav-item {
+    display: inline-block;
+    margin: .5em 0 .5em 1em;
+}
+
+.nav-link {
+    font-weight: bold;
+}
+
+/* ********** FOOTER ********** */
+
+footer {
+    position: relative;
+    bottom: 0;
+    padding: 5px;
+    color: #ffffff;
+}
+
+footer a {
+    color: #ffffff;
+    display: inline-block;
+}
+
+/********************************
+ *                              *
+ * ********** PANELS ********** *
+ *                              *
+ ********************************/
+.panel {
+    background-color: rgba(255, 255, 255, 1);
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 6.5625%;
+    box-shadow: 0px 4px 16px #000000;
+    color: #555555;
+}
+
+/* The main title */
+#title {
+    margin-top: 128px;
+    font-size: 3.5em;
+    display: inline-block;
+}
+
+/* The full arrow */
+.arrow {
+    height: 60px;
+    width: 60px;
+    background-image: url("../images/icons/arrow.png");
+    display: block;
+    margin: 80px auto;
+}
+
+/* The semi arrow */
+.semi-arrow {
+    height: 33px;
+    width: 72px;
+    background: url("../images/icons/semi-arrow.png") no-repeat;
+    display: block;
+    margin: 0 auto;
+    bottom: 0;
+}
+
+/* The anchor link to center the panel */
+.anchor {
+    height: 50px;
+    margin-top: -50px;
+    display: block;
+}
+
+/* The images between the panels */
+.scroll-image {
+    height: 650px;
+    max-width: 1920px;
+    -webkit-background-size: cover; /* pour Chrome et Safari */
+    -moz-background-size: cover; /* pour Firefox */
+    -o-background-size: cover; /* pour Opera */
+    background-size: cover; /* version standardisée */
+}
+
+#presentation-image {
+    /*background: url('../images/intro-coffee.jpg') center 0 fixed no-repeat;*/
+    background: url('../images/pictures/road.jpg') center fixed no-repeat;
+    height: 750px;
+    color: #ffffff;
+    padding-top: 50px;
+}
+
+#introduction-image {
+    background: url('../images/pictures/mechanism.jpg') center fixed no-repeat;
+}
+
+#analyse-image {
+    background: url('../images/pictures/notebook.jpg') center fixed no-repeat;
+}
+
+#design-image {
+    background: url('../images/pictures/plan.jpg') center fixed no-repeat;
+}
+
+#build-image {
+    background: url('../images/pictures/code.jpg') center fixed no-repeat;
+}
+
+#ship-image {
+    background: url('../images/pictures/check.jpg') center fixed no-repeat;
+}
+
+#appendix-image {
+    background: url('../images/pictures/tools.jpg') center fixed no-repeat;
+    height: 750px;
+}
+
+/* The content of the panel */
+article {
+    margin: 0 auto 20px auto;
+    color: #555555;
+}
+
+article h2 {
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.why {
+    display: inline-block;
+    background: url("../images/why.svg") no-repeat center;
+    background-size: 20px;
+    height: 20px;
+    width: 20px;
+    margin-left: 10px;
+}
+
+/**********************************
+ *                                *
+ * ********** DIAGRAMS ********** *
+ *                                *
+ **********************************/
+
+.steps {
+    margin: 0 auto;
+}
+
+.step {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.action {
+    display: inline-block;
+    border: 5px solid #555555;
+    border-radius: 20px;
+    margin-top: -5px;
+}
+
+.document {
+    height: 70%;
+}
+
+.step-content {
+    /* Vertical align of text */
+    vertical-align: middle;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.document-legend-top, .document-legend-bottom {
+    font-size: .75em;
+    line-height: 1em;
+    display: block;
+}
+
+.document-legend-top {
+    margin-bottom: 5px;
+}
+
+.document-legend-bottom {
+    margin-top: -25px;
+}
+
+.check {
+    background: url("../images/check.svg") no-repeat center;
+    background-size: 50px;
+    height: 50px;
+    width: 50px;
+    vertical-align: middle;
+}
+
+/* ********** INTRODUCTION ********** */
+
+#introduction-article .step, #appendix-article .step {
+    height: 120px;
+    width: 120px;
+    /* Vertical align of text */
+    line-height: 120px;
+    margin: 20px 30px;
+}
+
+/* ********** ANALYSE ********** */
+
+#analyse-article .step, #design-article .step, #ship-article .step {
+    width: 160px;
+    height: 80px;
+    /* Vertical align of text */
+    line-height: 80px;
+    margin: 20px 25px;
+}
+
+#analyse-article .action, #design-article .action, #ship-article .action {
+    width: 80px;
+}
+
+#analyse-article .step-content, #design-article .step-content, #ship-article .step-content {
+    width: 80px;
+}
+
+/* ********** BUILD ********** */
+
+#build-article .step {
+    width: 100px;
+    height: 80px;
+    /* Vertical align of text */
+    line-height: 80px;
+    margin: 20px 25px;
+}
+
+#build-article .action {
+    width: 80px;
+}
+
+#build-article .step-content {
+    width: 80px;
+}
+
+.license {
+    height: 20px;
+}
+
+#license {
+    font-size: 0.75em;
+    float: left;
+    text-align: left;
+}

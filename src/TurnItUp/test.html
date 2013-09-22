@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+<div style="height: 3000px; background-color: green; padding: 20px;">
+    <div id="left-column" style="background-color: red; width: 850px; height: 1000px;padding: 20px;
+     margin:0 ;">
+        <div id="menu"
+             style="background-color: yellow; width:150px; height: 450px;
+         position:absolute"></div>
+    </div>
+</div>
+<script type="text/javascript">
+
+    $(window).scroll(function () {
+        var parentTopPosition = $('#left-column').position().top;
+        var parentHeight = $('#left-column').height();
+
+        var location = $(window).scrollTop();
+        if (location > parentTopPosition) {
+            if (location < (parentTopPosition + parentHeight - 450)) {
+                $('#menu').css('top', (location - parentTopPosition +20 ));
+            }
+        }
+    });
+
+</script>
+</body>
+</html>
