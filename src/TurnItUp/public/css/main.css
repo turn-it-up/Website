@@ -24,9 +24,14 @@ h2 {
     margin: 0 0 .1em 0;
 }
 
+h3 {
+    margin: 0;
+}
+
 ul {
-    list-style: none;
-    margin: 0.1em 0;
+    list-style: disc;
+    color: #555555;
+    /*margin: 0.1em 0;*/
 }
 
 a {
@@ -37,7 +42,7 @@ a {
 
 p {
     margin: 0;
-    font-size: 1.1em;
+    /*font-size: 1.1em;*/
 }
 
 table {
@@ -48,6 +53,11 @@ table {
 
 section a {
     color: #555555;
+}
+
+area {
+    display: block;
+    cursor: help;
 }
 
 .container {
@@ -171,7 +181,7 @@ footer a {
 #presentation-image {
     /*background: url('../images/intro-coffee.jpg') center 0 fixed no-repeat;*/
     background: url('../images/pictures/road.jpg') center fixed no-repeat;
-    height: 750px;
+    height: 700px;
     color: #ffffff;
     padding-top: 50px;
 }
@@ -221,11 +231,24 @@ article h2 {
     margin-left: 10px;
 }
 
+.modal {
+    background-color: #000000;
+    text-align: left;
+    width: 500px;
+}
+
 /**********************************
  *                                *
  * ********** DIAGRAMS ********** *
  *                                *
  **********************************/
+#introduction-panel {
+    height: 300px;
+}
+
+#analyse-panel {
+    height: 560px;
+}
 
 .steps {
     margin: 0 auto;

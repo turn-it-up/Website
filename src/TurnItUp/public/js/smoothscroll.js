@@ -140,6 +140,6 @@ var ss = {
     }
 }
 
-ss.STEPS = 7;
+ss.STEPS = 4;
 
 ss.addEvent(window,"load",ss.fixAllLinks);

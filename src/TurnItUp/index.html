@@ -4,11 +4,26 @@
     <title>Turn It UP ! • Méthodologie Agile</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="public/css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="public/css/jquery-ui-1.10.3.custom.css"/>
     <script type="text/javascript" src="public/js/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="public/js/jquery-ui-1.10.3.custom.min.js"></script>
 
     <script type="text/javascript" src="public/js/parallax.js"></script>
     <script type="text/javascript" src="public/js/smoothscroll.js"></script>
     <script type="text/javascript" src="public/js/main.js"></script>
+
+    <script>
+        $(function () {
+            $(".modal").dialog({
+                                   autoOpen: false,
+                                   modal: true,
+                                   width: 480
+                               });
+        });
+        function showModal (modalName) {
+            $("#" + modalName).dialog("open");
+        }
+    </script>
 </head>
 <body>
 <div>
@@ -26,16 +41,16 @@
                         Analyse</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#design" class="nav-link" title="Le design de la fonctionnalité">
+                    <a href="#design" class="nav-link" title="Le design de la fonction">
                         Design</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#build" class="nav-link" title="La réalisation de la fonctionnalité">
+                    <a href="#build" class="nav-link" title="La réalisation de la fonction">
                         Réalisation</a>
                 </li>
                 <li class="nav-item">
                     <a href="#delivery" class="nav-link"
-                       title="La livraison de la fonctionnalité">
+                       title="La livraison de la fonction">
                         Livraison</a>
                 </li>
                 <li class="nav-item"><a href="#appendix" class="nav-link">Annexe</a></li>
@@ -62,21 +77,82 @@
 <!-- ---------- INTRODUCTION ---------- -->
 <span class="anchor" id="introduction"></span>
 
-<div class="panel">
+<div class="panel" id="introduction-panel">
     <article class="article" id="introduction-article">
         <h2>Commencez ici !</h2>
         <a href="#" class="why"></a>
 
-        <div class="schema">
+        <figure>
             <img src="public/images/introduction.svg" usemap="#map-introduction">
             <map name="map-introduction">
-                <area shape="rect" coords="87,16,212,140" href="#analyse" alt="L'analyse des besoins" title="L'analyse des besoins"/>
-                <area shape="rect" coords="307,16,432,140" href="#design" alt="Le design de la fonctionnalité" title="Le design de la fonctionnalité"/>
-                <area shape="rect" coords="527,16,652,140" href="#build" alt="La réalisation de la fonctionnalité" title="La réalisation de la fonctionnalité"/>
-                <area shape="rect" coords="747,16,872,140" href="#delivery" alt="La livraison de la fonctionnalité" title="La livraison de la fonctionnalité"/>
+                <area shape="rect" coords="87,16,212,140" onclick="showModal('introduction-analyse-modal')" alt="L'analyse des besoins" title="L'analyse des besoins"/>
+                <area shape="rect" coords="307,16,432,140" onclick="showModal('introduction-design-modal')" alt="Le design de la fonction" title="Le design de la fonction"/>
+                <area shape="rect" coords="527,16,652,140" onclick="showModal('introduction-build-modal')" alt="La réalisation de la fonction" title="La réalisation de la fonction"/>
+                <area shape="rect" coords="747,16,872,140" onclick="showModal('introduction-delivery-modal')" alt="La livraison de la fonction" title="La livraison de la fonction"/>
             </map>
-        </div>
+        </figure>
     </article>
+    <aside id="introduction-analyse-modal" class="modal" title="Analyse des besoins">
+        <h4>Quoi ?</h4>
+
+        <p>Définir la vision, la fonction et son périmètre</p>
+        <h4>Comment ?</h4>
+        <ul>
+            <li>En réunissant les parties prenantes</li>
+            <li>En échangeant autour de la vision et du moyen de la réaliser</li>
+        </ul>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui demande la vision</li>
+            <li>Celui qui utilise la fonction</li>
+            <li>Celui qui réalise les mockups</li>
+        </ul>
+    </aside>
+    <aside id="introduction-design-modal" class="modal" title="Le design de la fonction">
+        <h4>Quoi ?</h4>
+
+        <p>Préparer l'implémentation de la fonction</p>
+        <h4>Comment ?</h4>
+
+        <p>En suivant un cheminement permettant de n'omettre aucun détail, en réalisant des spécifications, en réalisant les maquettes</p>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui réalise la conception</li>
+            <li>Celui qui réalise les maquettes</li>
+        </ul>
+    </aside>
+    <aside id="introduction-build-modal" class="modal" title="La réalisation de la fonction">
+        <h4>Quoi ?</h4>
+
+        <p>Implémenter la fonction</p>
+        <h4>Comment ?</h4>
+
+        <p>En réalisant des tests, en développant, en intégrant, en faisant valider le code par des pairs</p>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui développe</li>
+            <li>Celui qui intègre</li>
+            <li>Celui qui valide le code</li>
+        </ul>
+    </aside>
+    <aside id="introduction-delivery-modal" class="modal" title="La livraison de la fonction">
+        <h4>Quoi ?</h4>
+
+        <p>Mettre à la fonction disposition de celui qui l'utilise</p>
+        <h4>Comment ?</h4>
+
+        <p>En validant la fonction en pré production, en la déployant en production, en analysant les retours de ceux qui l'utilisent, en réflechissant à l'améliorer</p>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui a la vision</li>
+            <li>Celui qui met en production la fonction</li>
+            <li>Celui qui utilise la fonction</li>
+        </ul>
+    </aside>
     <a href="#analyse" class="semi-arrow"></a>
 </div>
 
@@ -86,12 +162,113 @@
 <!-- ---------- ANALYSE ---------- -->
 <span class="anchor" id="analyse"></span>
 
-<div class="panel">
+<div class="panel" id="analyse-panel">
     <article id="analyse-article">
         <h2>L'analyse des besoins</h2>
         <a href="" class="why"></a>
-        <figure><img src="public/images/analyse.svg"></figure>
+        <figure><img src="public/images/analyse.svg" usemap="#analyse-map">
+            <map name="analyse-map">
+                <area shape="rect" coords="23,181,77,236" onclick="showModal('analysis-vision-modal')" alt="La vision" title="La vision"/>
+                <area shape="rect" coords="213,160,314,257" onclick="showModal('analysis-requirements-capture-modal')" alt="Le recueil des besoins" title="Le recueil des besoins"/>
+                <area shape="rect" coords="428,158,529,261" onclick="showModal('requirements-analysis-modal')" alt="" title=""/>
+                <area shape="rect" coords="643,157,744,260" onclick="showModal('ux-realization-modal')" alt="Réaliser l'expérience utilisateur" title="Réaliser l'expérience utilisateur"/>
+                <area shape="rect" coords="865,189,909,233" onclick="showModal('analyse-check-modal')" alt="" title=""/>
+                <area shape="rect" coords="454,330,504,394" onclick="showModal('requirements-and-use-case-document-modal')" alt="" title=""/>
+                <area shape="rect" coords="453,28,503,92" href="#use-case-diagram" alt="" title=""/>
+                <area shape="rect" coords="668,331,718,395" href="mockup-document" alt="" title=""/>
+
+            </map>
+        </figure>
     </article>
+    <aside id="analysis-vision-modal" class="modal" title="La vision">
+        <h4>Quoi ?</h4>
+
+        <p>La vision d'une fonction qui pourrait apporter au business ou à l'utilisateur</p>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui a la vision</li>
+        </ul>
+    </aside>
+    <aside id="analysis-requirements-capture-modal" class="modal" title="Recueillir le besoin">
+        <h4>Quoi ?</h4>
+
+        <p>Etablir la fonction et les fonctionnalités pour atteindre cette vision</p>
+        <h4>Comment ?</h4>
+
+        <ul>
+            <li>En réunissant les parties prenantes</li>
+            <li>En échangeant autour de la vision et du moyen de la réaliser</li>
+        </ul>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui a la vision</li>
+            <li>Celui qui utilise la fonction</li>
+            <li>Celui qui réalise l'expérience utilisateur</li>
+        </ul>
+    </aside>
+
+    <aside id="requirements-analysis-modal" class="modal" title="Analyser les exigences">
+        <h4>Quoi ?</h4>
+
+        <p>Établir les besoins et les exigences autour de la fonction</p>
+        <h4>Comment ?</h4>
+
+        <ul>
+            <li>En décrivant la vision</li>
+            <li>En décrivant les moyens de la réaliser (les fonctions)</li>
+            <li>En déterminant les acteurs et les cas d'utilisation</li>
+            <li>En déterminant les priorités des cas d'utilisation</li>
+            <li>En déterminant les exigences autour des fonctions et des fonctionnalités</li>
+        </ul>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+        </ul>
+    </aside>
+
+    <aside id="ux-realization-modal" class="modal" title="Réaliser l'expérience utilisateur">
+        <h4>Quoi ?</h4>
+
+        <p>Établir l'expérience utilisateur</p>
+        <h4>Comment ?</h4>
+
+        <ul>
+            <li>En réalisant des mockups</li>
+        </ul>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui réalise l'expérience utilisateur</li>
+        </ul>
+    </aside>
+
+    <aside id="analyse-check-modal" class="modal" title="Valider l'analyse des besoin">
+        <h4>Quoi ?</h4>
+        <ul>
+            <li>Déterminer les premières itérations</li>
+        </ul>
+        <h4>Comment ?</h4>
+
+        <ul>
+            <li>En évaluant le temps nécessaire à la réalisation des fonctionnalités</li>
+            <li>En triant les fonctionnalités selon le rapport Business value / temps
+                nécessaire à la réalisation
+            </li>
+        </ul>
+        <h4>Qui ?</h4>
+        <ul>
+            <li>Celui qui mène la fonction</li>
+            <li>Celui qui a la vision</li>
+            <li>Celui qui utilise la fonction</li>
+            <li>Celui qui réalise l'expérience utilisateur</li>
+        </ul>
+    </aside>
+
+    <aside id="requirements-and-use-case-document-modal" class="modal" title="">
+        <h4></h4>
+        <a href="https://docs.google.com/document/d/1MbriWQeiowynkKSFRLlncsNywVFtJ4-DgNhxhtzDTZs" target="_blank">Exemple</a>
+    </aside>
+
     <a href="#design" class="semi-arrow"></a>
 </div>
 
@@ -103,7 +280,7 @@
 
 <div class="panel">
     <article id="design-article">
-        <h2>Le design de la fonctionnalité</h2>
+        <h2>Le design de la fonction</h2>
         <a href="" class="why"></a>
 
         <div class="steps">
@@ -185,7 +362,7 @@
 <div class="panel">
     <article id="build-article">
 
-        <h2>La réalisation de la fonctionnalité</h2>
+        <h2>La réalisation de la fonction</h2>
         <a href="#" class="why"></a>
 
         <div class="steps">
@@ -278,7 +455,7 @@
 
 <div class="panel">
     <article id="delivery-article">
-        <h2>La livraison de la fonctionnalité</h2>
+        <h2>La livraison de la fonction</h2>
         <a href="#" class="why"></a>
 
         <div class="steps">
@@ -289,7 +466,7 @@
             <div class="step">
                 <div class="action">
                     <div class="step-content">
-                        <strong>Valider la fonctionnalité</strong>
+                        <strong>Valider la fonction</strong>
                     </div>
                 </div>
             </div>
@@ -347,6 +524,10 @@
             </div>
         </div>
     </article>
+    <aside>
+        Fonction :
+        Fonctionnalités :
+    </aside>
     <a href="#footer" class="semi-arrow"></a>
 </div>
 <div class="scroll-image" id="appendix-image" data-type="background" data-speed="7"
